@@ -1,0 +1,4 @@
+.DS_Store
+.vscode
+*.o
+ex00/tester
