@@ -6,13 +6,13 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:07:02 by samartin          #+#    #+#             */
-/*   Updated: 2024/03/21 15:48:44 by samartin         ###   ########.fr       */
+/*   Updated: 2024/03/29 16:52:06 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed()
+Fixed::Fixed(void)
 {
 	std::cout << "Default constructor called" << std::endl;
 	this->value = 0;
@@ -31,7 +31,7 @@ Fixed& Fixed::operator=(Fixed const & rs)
 	return (*this);
 }
 
-Fixed::~Fixed()
+Fixed::~Fixed(void)
 {
 	std::cout << "Destructor called" << std::endl;
 }
