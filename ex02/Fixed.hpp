@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:06:51 by samartin          #+#    #+#             */
-/*   Updated: 2024/03/29 17:29:01 by samartin         ###   ########.fr       */
+/*   Updated: 2024/04/02 11:55:59 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ class Fixed
 		bool operator>(const Fixed& rs) const;
 		bool operator<=(const Fixed& rs) const;
 		bool operator>=(const Fixed& rs) const;
-		Fixed operator+(const Fixed& rs);
-		Fixed operator-(const Fixed& rs);
-		Fixed operator*(const Fixed& rs);
-		Fixed operator/(const Fixed& rs);
+		Fixed operator+(const Fixed& rs) const;
+		Fixed operator-(const Fixed& rs) const;
+		Fixed operator*(const Fixed& rs) const;
+		Fixed operator/(const Fixed& rs) const;
 		Fixed& operator++(void); //Prefix
 		Fixed operator++(int); //Sufix
 		Fixed& operator--(void); //Prefix

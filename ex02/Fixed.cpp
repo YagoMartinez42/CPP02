@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:07:02 by samartin          #+#    #+#             */
-/*   Updated: 2024/04/01 16:05:18 by samartin         ###   ########.fr       */
+/*   Updated: 2024/04/03 15:46:45 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ bool Fixed::operator>=(const Fixed& rs) const
 
 /* Arithmetic operator functions */
 
-Fixed Fixed::operator+(const Fixed& rs)
+Fixed Fixed::operator+(const Fixed& rs) const
 {
 	Fixed result;
 
@@ -107,34 +107,32 @@ Fixed Fixed::operator+(const Fixed& rs)
 	return (result);
 }
 
-Fixed Fixed::operator-(const Fixed& rs)
+Fixed Fixed::operator-(const Fixed& rs) const
 {
 	Fixed result;
 
-	result.setRawBits(this->value + rs.getRawBits());
+	result.setRawBits(this->value - rs.getRawBits());
 	return (result);
 }
 
-Fixed Fixed::operator*(const Fixed& rs)
+Fixed Fixed::operator*(const Fixed& rs) const
 {
 	Fixed result;
 	long long aux;
 
 	aux = (long long)this->value * (long long)rs.getRawBits();
-	aux = (aux >> this->fraction) & INT_MAX;
-	std::cout << aux << std::endl;
+	aux = (aux >> (this->fraction)) & (long long)INT_MAX;
 	result.setRawBits(aux);
 	return (result);
 }
 
-Fixed Fixed::operator/(const Fixed& rs)
+Fixed Fixed::operator/(const Fixed& rs) const
 {
 	Fixed result;
 	long long aux;
 
 	aux = (long long)this->value << this->fraction / rs.getRawBits();
-	aux = (aux >> this->fraction) & INT_MAX;
-	std::cout << aux << std::endl;
+	aux = (aux >> this->fraction) & (long long)INT_MAX;
 	result.setRawBits(aux);
 	return (result);
 }

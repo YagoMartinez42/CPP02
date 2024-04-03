@@ -6,36 +6,18 @@
 /*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:06:33 by samartin          #+#    #+#             */
-/*   Updated: 2024/04/01 15:48:52 by samartin         ###   ########.fr       */
+/*   Updated: 2024/04/02 15:48:18 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-/*
-int main( void ) {
-	Fixed a;
-	Fixed const b( 10 );
-	Fixed const c( 42.42f );
-	Fixed const d( b );
-
-	a = Fixed( 1234.4321f );
-	std::cout << "a is " << a << std::endl;
-	std::cout << "b is " << b << std::endl;
-	std::cout << "c is " << c << std::endl;
-	std::cout << "d is " << d << std::endl;
-	std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-	std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-	return 0;
-}*/
 
 int main( void )
 {
 	Fixed a;
 	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
 	Fixed c( 42.42f );
-	Fixed const d( 10 );
+	Fixed const d( -1 );
 	float n = 3.001f;
 
 	std::cout << a << std::endl;
@@ -48,7 +30,7 @@ int main( void )
 
 	std::cout << std::endl;
 	std::cout << "Custom tests" << std::endl;
-	a.setRawBits( 12344321);
+	a.setRawBits( 123443 );
 	std::cout << "a is " << a << std::endl;
 	std::cout << "a two lowest weight bits are: " << ((a.getRawBits() & 2) >> 1) << (a.getRawBits() & 1) << std::endl;
 	a++;
@@ -62,6 +44,48 @@ int main( void )
 	c--;
 	std::cout << "after --, c raw integer decimal representation is: " << c.getRawBits() << std::endl;
 	std::cout << "c is " << c.toInt() << " as integer" << std::endl;
+	std::cout << "d is " << d << " as decimal with point and " << d.toInt() << " as integer." << std::endl;
+
+	std::cout << "is a greater than b? ";
+	if (a > b)
+		std::cout << "yes";
+	else
+		std::cout << "no";
+	std::cout << std::endl;
+	std::cout << "is b equal or greater than c? ";
+	if (b >= c)
+		std::cout << "yes";
+	else
+		std::cout << "no";
+	std::cout << std::endl;
+	std::cout << "is a less than c? ";
+	if (a < c)
+		std::cout << "yes";
+	else
+		std::cout << "no";
+	std::cout << std::endl;
+	std::cout << "is c equal or less than d? ";
+	if (c <= d)
+		std::cout << "yes";
+	else
+		std::cout << "no";
+	std::cout << std::endl;
+	std::cout << "is b equal to d? ";
+	if (b == d)
+		std::cout << "yes";
+	else
+		std::cout << "no";
+	std::cout << std::endl;
+	std::cout << "is a different to d? ";
+	if (a != d)
+		std::cout << "yes";
+	else
+		std::cout << "no";
+	std::cout << std::endl;
+	std::cout << "a + b is " << (a + b) << std::endl;
+	std::cout << "c - d is " << (c - d) << std::endl;
+	std::cout << "a * c is " << (a * c) << std::endl;
+	std::cout << "b / d is " << (b / d) << std::endl;
 
 	std::cout << "n is " << n << std::endl;
 	n++;
