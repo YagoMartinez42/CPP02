@@ -121,7 +121,7 @@ Fixed Fixed::operator*(const Fixed& rs) const
 	long long aux;
 
 	aux = (long long)this->value * (long long)rs.getRawBits();
-	aux = (aux >> (this->fraction)) & (long long)INT_MAX;
+	aux = (aux >> (this->fraction)) & (long long)INT32_MAX;
 	result.setRawBits(aux);
 	return (result);
 }
@@ -132,7 +132,7 @@ Fixed Fixed::operator/(const Fixed& rs) const
 	long long aux;
 
 	aux = (long long)this->value << this->fraction / rs.getRawBits();
-	aux = (aux >> this->fraction) & (long long)INT_MAX;
+	aux = (aux >> this->fraction) & (long long)INT32_MAX;
 	result.setRawBits(aux);
 	return (result);
 }
