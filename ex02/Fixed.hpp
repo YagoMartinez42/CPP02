@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: samartin <samartin@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:06:51 by samartin          #+#    #+#             */
-/*   Updated: 2024/04/02 11:55:59 by samartin         ###   ########.fr       */
+/*   Updated: 2024/10/29 12:53:43 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define FIXED_HPP
 # include <iostream>
 # include <cmath>
+
+# define FX_INT_MAX 2147483647
 
 class Fixed
 {

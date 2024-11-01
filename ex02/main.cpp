@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: samartin <samartin@student.42.fr>          +#+  +:+       +#+        */
+/*   By: samartin <samartin@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:06:33 by samartin          #+#    #+#             */
-/*   Updated: 2024/04/02 15:48:18 by samartin         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:46:23 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,11 +82,15 @@ int main( void )
 	else
 		std::cout << "no";
 	std::cout << std::endl;
+	std::cout << "At this point of the test:" << std::endl;
+	std::cout << "a = " << a << " b = " << b << " c = " << c << " d = " << d << std::endl;
 	std::cout << "a + b is " << (a + b) << std::endl;
 	std::cout << "c - d is " << (c - d) << std::endl;
 	std::cout << "a * c is " << (a * c) << std::endl;
+	std::cout << "Division has been hard to implement" << std::endl;
+	std::cout << "a / b is " << (a / b) << std::endl;
 	std::cout << "b / d is " << (b / d) << std::endl;
-
+	std::cout << "Float control example as a curiosity" << std::endl;
 	std::cout << "n is " << n << std::endl;
 	n++;
 	std::cout << "after ++, n is " << n << std::endl;
