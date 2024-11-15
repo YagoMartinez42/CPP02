@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:06:33 by samartin          #+#    #+#             */
-/*   Updated: 2024/11/01 17:46:23 by samartin         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:29:56 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int main( void )
 	std::cout << "a + b is " << (a + b) << std::endl;
 	std::cout << "c - d is " << (c - d) << std::endl;
 	std::cout << "a * c is " << (a * c) << std::endl;
-	std::cout << "Division has been hard to implement" << std::endl;
+	std::cout << "b * c is " << (b * c) << std::endl;
 	std::cout << "a / b is " << (a / b) << std::endl;
 	std::cout << "b / d is " << (b / d) << std::endl;
 	std::cout << "Float control example as a curiosity" << std::endl;

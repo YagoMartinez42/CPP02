@@ -6,7 +6,7 @@
 /*   By: samartin <samartin@student.42madrid.es>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 12:07:02 by samartin          #+#    #+#             */
-/*   Updated: 2024/11/01 17:46:26 by samartin         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:22:32 by samartin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,31 +117,15 @@ Fixed Fixed::operator-(const Fixed& rs) const
 
 Fixed Fixed::operator*(const Fixed& rs) const
 {
-	Fixed result;
-	long long aux1;
-	long long aux2;
-	int displ = 0;
+	Fixed result (this->toFloat() * rs.toFloat());
 
-	while (displ < 8 && !(aux1 & 1) && !(aux2 & 1))
-	{
-		aux1 = aux1 >> 1;
-		aux2 = aux2 >> 1;
-		displ++;
-	}
-	aux = (long long)this->value * (long long)rs.getRawBits();
-	aux = (aux >> (this->fraction)) & (long long)FX_INT_MAX;
-	result.setRawBits(aux);
 	return (result);
 }
 
 Fixed Fixed::operator/(const Fixed& rs) const
 {
-	Fixed result;
-	long long aux;
+	Fixed result (this->toFloat() / rs.toFloat());
 
-	aux = (long long)this->value << this->fraction / rs.getRawBits();
-	aux = (aux >> this->fraction) & (long long)FX_INT_MAX;
-	result.setRawBits(aux);
 	return (result);
 }
 
